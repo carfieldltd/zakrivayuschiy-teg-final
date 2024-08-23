@@ -170,6 +170,79 @@
   aspect-ratio: 1/1;
 }
 
+.sepia {
+  filter: sepia(60%);
+}
+
+.grayscale {
+  filter: grayscale(50%) contrast(200%);
+}
+
+.saturate {
+  filter: saturate(200%);
+}
+
+.opacity {
+  filter: opacity(0.6);
+}
+
+.brightness {
+  filter: brightness(120%);
+}
+
+.blur {
+  filter: blur(2px);
+}
+
+.invert {
+  filter: invert(10%);
+}
+
+.hue-rotate {
+  filter: hue-rotate(0.1turn);
+}
+
+.card__label {
+  position: absolute;
+  inset-inline-end: 25px;
+  inset-block-start: 25px;
+
+  color: var(--accent-color, #000);
+  font-family: var(
+    --accent-font-family,
+    "PressStart2P-Regular",
+    "fantasy",
+    sans-serif
+  );
+  font-size: 14px;
+  font-style: normal;
+  font-variation-settings: "wght" var(--normal-wght, 400);
+  line-height: 14px;
+
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  text-shadow: 0 0 1px var(--label-shadow, #fff);
+}
+
+@supports (text-stroke: 1px var(--label-shadow)) or
+  (-webkit-text-stroke: 1px var(--label-shadow)) {
+  .card__label {
+    -webkit-text-stroke: 1px var(--label-shadow, #fff);
+    text-stroke: 1px var(--label-shadow, #fff);
+    text-shadow: none;
+  }
+}
+
+.card__content {
+  padding: 27px 25px;
+}
+
+.card__description {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
 .paragraph {
   font-variation-settings: "wght" var(--normal-wght, 400);
   line-height: 116.667%;
@@ -179,11 +252,14 @@
   display: flex;
   justify-content: end;
   padding-block-start: 28px;
-  gap: 9px;
+  align-items: center;
 }
 
 .card__icon-button {
+  cursor: pointer;
+  background-color: transparent;
   block-size: 34px;
+  border: none;
   outline: 2px solid transparent;
   transition: outline 0.3s ease;
 }
@@ -193,7 +269,7 @@
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--accent-color, #000);
 }
 
 .button {
@@ -201,6 +277,15 @@
 
   outline: 2px solid var(--accent-color);
   transition: box-shadow 0.3s ease;
+}
+
+.card__like-button {
+  inline-size: 130px;
+  padding: 8px;
+}
+
+.card__like-button:focus {
+  outline: none;
 }
 
 .button::before {
