@@ -272,13 +272,6 @@
   outline: 2px solid var(--accent-color, #000);
 }
 
-.button {
-  position: relative;
-
-  outline: 2px solid var(--accent-color);
-  transition: box-shadow 0.3s ease;
-}
-
 .card__like-button {
   inline-size: 130px;
   padding: 8px;
