@@ -288,6 +288,20 @@
   outline: none;
 }
 
+.button {
+  position: relative;
+  color: var(--card-button, #fff);
+  border: 2px solid var(--accent-color, #000);
+  background-color: transparent;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.button:focus-visible {
+  border: 2px solid var(--accent-color, #000);
+  box-shadow: 2px 2px 0 var(--accent-color, #000);
+}
+
 .button::before {
   content: "";
   position: absolute;
@@ -295,9 +309,7 @@
   block-size: 100%;
   inset-inline-start: 0;
   inset-block-start: 0;
-
   background-color: var(--accent-color);
-
   scale: 0 1;
   transform-origin: left;
   transition: scale 0.5s ease-in-out;
@@ -307,42 +319,21 @@
   scale: 1;
 }
 
-.button:hover .button__text {
-  color: var(--bg-color);
-}
-
-.button:hover .footer__icon {
-  color: var(--bg-color);
-}
-
-.button:focus-visible {
-  box-shadow: 5px 5px 0 0 currentColor;
-}
-
-.button:focus {
-  box-shadow: 5px 5px 0 0 currentColor;
-}
-
-.button:focus-within {
-  box-shadow: 5px 5px 0 0 currentColor;
-}
-
-.card__like-button {
-  min-inline-size: 126px;
-  min-block-size: 34px;
-}
-
 .button__text {
   position: relative;
   z-index: 1;
-
-  font-family: var(--accent-font, fantasy);
+  font-family: var(
+    --accent-font-family,
+    "PressStart2P-Regular",
+    "fantasy",
+    sans-serif
+  );
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 90%;
-
   transition: color 1s ease;
+  mix-blend-mode: difference;
 }
 
 .footer__save-button {
