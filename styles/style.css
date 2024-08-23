@@ -302,7 +302,7 @@
   block-size: 100%;
   inset-inline-start: 0;
   inset-block-start: 0;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #000);
   scale: 0 1;
   transform-origin: left;
   transition: scale 0.5s ease-in-out;
@@ -353,7 +353,6 @@
   z-index: 1;
   inline-size: 21px;
   block-size: 21px;
-  aspect-ratio: 1/1;
   transition: color 1s ease;
   mix-blend-mode: difference;
 }
