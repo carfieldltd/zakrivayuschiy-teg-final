@@ -365,6 +365,60 @@
   mix-blend-mode: difference;
 }
 
+.modal {
+  inline-size: 357px;
+  padding: 31px;
+
+  color: var(--accent-color, #000);
+  font-family: var(
+    --accent-font-family,
+    "PressStart2P-Regular",
+    "fantasy",
+    sans-serif
+  );
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: uppercase;
+
+  background-color: var(--bg-color, #fff);
+  border: 2px solid var(--accent-color, #000);
+}
+
+.modal::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.modal__content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.modal__icon {
+  inline-size: 40px;
+  block-size: 40px;
+}
+
+.modal__text {
+  text-transform: uppercase;
+  max-inline-size: 200px;
+}
+
+.modal__button {
+  text-transform: uppercase;
+  inline-size: 293px;
+  padding: 9px;
+}
+
 @media (width <= 410px) {
   .header__title {
     margin-block-start: -18px;
