@@ -19,6 +19,7 @@
   min-block-size: 100dvb;
   font-family: var(--main-font-family, "Inter-Variable", "Arial", sans-serif);
   font-variation-settings: "wght" var(--normal-wght, 400);
+
   background-image: var(
     --bg-image,
     repeating-linear-gradient(to left, #d3d3d3 0 2px, transparent 2px 4px),
@@ -30,6 +31,7 @@
   background-color: var(--bg-color, #fff);
   background-size: cover;
   background-attachment: fixed;
+
   inline-size: 100%;
   display: grid;
   justify-items: center;
@@ -251,8 +253,8 @@
 .card__controls {
   display: flex;
   justify-content: end;
-  padding-block-start: 28px;
   align-items: center;
+  padding-block-start: 25px;
 }
 
 .card__icon-button {
@@ -283,10 +285,12 @@
 
 .button {
   position: relative;
+
   color: var(--card-button, #fff);
   border: 2px solid var(--accent-color, #000);
   background-color: transparent;
   cursor: pointer;
+
   transition: box-shadow 0.3s ease;
 }
 
@@ -302,7 +306,9 @@
   block-size: 100%;
   inset-inline-start: 0;
   inset-block-start: 0;
+
   background-color: var(--accent-color, #000);
+
   scale: 0 1;
   transform-origin: left;
   transition: scale 0.5s ease-in-out;
@@ -315,6 +321,7 @@
 .button__text {
   position: relative;
   z-index: 1;
+
   font-family: var(
     --accent-font-family,
     "PressStart2P-Regular",
@@ -325,7 +332,9 @@
   font-style: normal;
   font-weight: 400;
   line-height: 90%;
+
   transition: color 1s ease;
+
   mix-blend-mode: difference;
 }
 
@@ -342,18 +351,23 @@
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
+
   padding: 15px;
   min-inline-size: 306px;
   inline-size: min(80dvi, 335px);
+
   background-color: var(--bg-color, #fff);
 }
 
 .footer__icon {
   position: relative;
   z-index: 1;
+
   inline-size: 21px;
   block-size: 21px;
+
   transition: color 1s ease;
+
   mix-blend-mode: difference;
 }
 
