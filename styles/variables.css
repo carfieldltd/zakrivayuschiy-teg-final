@@ -1,14 +1,25 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-    --max-wdth: 700px;
-    --main-font: 'Inter', sans-serif;
-    --accent-font: 'Press Start 2P', fantasy;
-    --heart-fill: #FF0000;
-    --normal-wght: 400;
-    --bold-wght: 700;
-    --bg-color: #FFF;
-    --accent-color: #000;
-    --bg-image: url(../svg/pattern-light.svg);
-    --heart-contour: #000;
-  }
+  --main-font-family: "Inter-Variable", "Arial", sans-serif;
+  --accent-font-family: "PressStart2P-Regular", "fantasy", sans-serif;
+  --width: clamp(375px, 50%, 700px);
+  --bg-image: repeating-linear-gradient(
+      to left,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+
+  --normal-wght: 400;
+  --bold-wght: 700;
+
+  --bg-color: #fff;
+  --accent-color: #000;
+  --card-button: #fff;
+
+  --heart-fill: #ff0000;
+  --heart-contour: #000;
+  --label-shadow: #fff;
+}
